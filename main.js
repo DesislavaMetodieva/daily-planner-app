@@ -8,4 +8,5 @@
 // In order to color code each time block based on past, present, and future when the timeblock is viewed is to create a loop which is checking every block if it is in past hour, present hour or future hours. If equals to one of those 3 types of hours (past, present, future) I must add the relevant class to change the color of the corresponding block.
 // Create event listener for every event being added to the blocks
 // Store the event in Local storage so when the page reloads, the events are still rendering on the page in the same location
+// Once event is added and user submits it the app should return and render a confirmation of the happened. The message should appear above on the div container
 
