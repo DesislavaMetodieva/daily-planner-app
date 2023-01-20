@@ -27,7 +27,7 @@ for (var i = 0; i < hourDivs.length; i++) {
 var saveBtn = document.getElementById("saveBtn");
 var textarea = document.getElementById("textarea");
 
-// Add click event listener for each button which then it grabs values from time and value divs and saves them to local storage
+// Click event listener for each button which then it grabs values from time and value divs and saves them to local storage
 
 document.querySelectorAll("#saveBtn").forEach(function(saveBtn) {
   saveBtn.addEventListener("click", function(event) {

@@ -9,7 +9,7 @@ textarea {
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
+  /* border-left: 1px solid black; */
   padding: 10px;
 }
 
@@ -27,7 +27,9 @@ textarea {
 
 .time-block {
   text-align: center;
-  border-radius: 15px;
+  /*  border-radius: 15px; */ 
+  display: flex;
+  align-self: center;
 }
 
 .row {
@@ -69,4 +71,9 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.icon {
+  display: block;
+}
+
 
