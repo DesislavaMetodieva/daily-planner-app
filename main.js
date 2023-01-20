@@ -5,7 +5,7 @@ $('#currentDay').text(todayDate.format('dddd, MMMM Do'));
 // Get the current hour
 var currentHour = moment().hour();
 
-// Get all elements with the class "hour"
+// Get all elements with the class "time-div"
 var hourDivs = document.getElementsByClassName("time-div");
 
 // Loop through the hour divs and add the appropriate class
@@ -27,15 +27,27 @@ for (var i = 0; i < hourDivs.length; i++) {
 var saveBtn = document.getElementById("saveBtn");
 var textarea = document.getElementById("textarea");
 
-// Add click event listener to the button
-// Store the event in Local storage so when the page reloads, the events are still rendering on the page in the same location
+// Add click event listener for each button which then it grabs values from time and value divs and saves them to local storage
 
-saveBtn.addEventListener("click", function(){
-  console.log("mewo");
-  const text = textarea.value;
-  localStorage.setItem("text", text);
+document.querySelectorAll("#saveBtn").forEach(function(saveBtn) {
+  saveBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    console.log("mewo")
+    var value = saveBtn.previousElementSibling.value;
+    var time = saveBtn.parentNode.id.split("-")[1];
+    localStorage.setItem(time, value);
+  });
 });
 
+//retrieves items from local storage and sets them in proper places
 
-// Once event is added and user submits it the app should return and render a confirmation of the happened. The message should appear above on the div container
+document.querySelector("#hour-09 .time-block").value = localStorage.getItem("09");
+document.querySelector("#hour-10 .time-block").value = localStorage.getItem("10");
+document.querySelector("#hour-11 .time-block").value = localStorage.getItem("11");
+document.querySelector("#hour-12 .time-block").value = localStorage.getItem("12");
+document.querySelector("#hour-13 .time-block").value = localStorage.getItem("13");
+document.querySelector("#hour-14 .time-block").value = localStorage.getItem("14");
+document.querySelector("#hour-15 .time-block").value = localStorage.getItem("15");
+document.querySelector("#hour-16 .time-block").value = localStorage.getItem("16");
+document.querySelector("#hour-17 .time-block").value = localStorage.getItem("17");
 
