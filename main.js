@@ -1,4 +1,5 @@
 var todayDate = moment();
+
 $('#currentDay').text(todayDate.format('dddd, MMMM Do'));
 
 // Get the current hour
@@ -27,31 +28,13 @@ var saveBtn = document.getElementById("saveBtn");
 var textarea = document.getElementById("textarea");
 
 // Add click event listener to the button
-
-saveBtn.addEventListener("click", function() {
-  // Get the text from the textarea
-    event.preventDefault();
-  var text = textarea.value;
-
-  // Save the text to Local Storage
-  localStorage.setItem("text", text);
-
-  console.log("mewo");
-});
-
 // Store the event in Local storage so when the page reloads, the events are still rendering on the page in the same location
 
-
-// // id=textarea
-
-// var newEvent = document.getElementById("textarea").value;
-// localStorage.setItem("textareaValue", newEvent);
-
-
-// var eventStored = localStorage.getItem('textareaValue');
-// document.getElementById("textarea").value = eventStored;
-
-// console.log(newEvent)
+saveBtn.addEventListener("click", function(){
+  console.log("mewo");
+  const text = textarea.value;
+  localStorage.setItem("text", text);
+});
 
 
 // Once event is added and user submits it the app should return and render a confirmation of the happened. The message should appear above on the div container
