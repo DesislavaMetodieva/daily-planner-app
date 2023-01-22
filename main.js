@@ -8,13 +8,17 @@ var currentHour = moment().hour();
 // Get all elements with the class "time-div"
 var hourDivs = document.getElementsByClassName("time-div");
 
-// Loop through the hour divs and add the appropriate class
+// Get the button and textarea elements
 
-// Task for Sunday - to check how to remove the default colors for saveBtn class, #textarea, and .hour
+var saveBtn = document.getElementById("saveBtn");
+var textarea = document.getElementById("textarea");
+
+// Loop through the hour divs and add the appropriate class
 
 for (var i = 0; i < hourDivs.length; i++) {
 
   var hour = parseInt(hourDivs[i].querySelector("span").id);
+
   
   if (hour < currentHour) {
     hourDivs[i].classList.add("past");
