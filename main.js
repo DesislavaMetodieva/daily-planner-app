@@ -9,6 +9,9 @@ var currentHour = moment().hour();
 var hourDivs = document.getElementsByClassName("time-div");
 
 // Loop through the hour divs and add the appropriate class
+
+// Task for Sunday - to check how to remove the default colors for saveBtn class, #textarea, and .hour
+
 for (var i = 0; i < hourDivs.length; i++) {
 
   var hour = parseInt(hourDivs[i].querySelector("span").id);
@@ -32,7 +35,9 @@ var textarea = document.getElementById("textarea");
 document.querySelectorAll("#saveBtn").forEach(function(saveBtn) {
   saveBtn.addEventListener("click", function(event) {
     event.preventDefault();
-    console.log("mewo")
+
+    // Checking if configured eventListener works
+    // console.log("mewo")
     var value = saveBtn.previousElementSibling.value;
     var time = saveBtn.parentNode.id.split("-")[1];
     localStorage.setItem(time, value);
