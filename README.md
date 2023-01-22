@@ -15,6 +15,8 @@ No need for specific installation, you need only a web browser and good internet
 
 Please follow the URL, so you can open the application: https://desislavametodieva.github.io/daily-planner-app/
 
+![image](https://user-images.githubusercontent.com/82023025/213927308-bb806b96-1fae-460d-b4c6-fd1eee6e031f.png)
+
 # License
 
 Please refer to the LICENSE in the repo.
