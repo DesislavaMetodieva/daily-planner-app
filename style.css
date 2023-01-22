@@ -1,7 +1,5 @@
 :root {
-  --velvet: #094af1;
-  --velvetBack: #F5E9FF;
-  --margin: 8px;
+  --velvet: #6B00C5;
 };
 
 body {
@@ -11,10 +9,6 @@ body {
   line-height: 1;
 };
 
-
-/* h1, p {
-  transform: translate(0%, 100%) matrix(1, 0, 0, 1, 0, 0);
-} */
 
 textarea {
  /*  background: transparent; */
@@ -50,6 +44,7 @@ textarea {
   outline: none;
   height: 100%;
   padding-top: 10px;
+  color: inherit;
 }
 
 .row {
@@ -62,7 +57,7 @@ textarea {
 
 .hour {
   /* background-color: #ffffff; */
-  color: #000000;
+  color: inherit;
   /* border-top: 1px dashed #000000; */
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -70,18 +65,18 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
-  color: black;
+  background-color: #F9F9F9;
+  color: #AAAAAA;
 }
 
 .present {
-  background-color: #ff6961;
-  color: white;
+  background-color: #F5E9FF;
+  color: var(--velvet);
 }
 
 .future {
-  background-color: #77dd77;
-  color: white;
+  background-color: #F6F6F6;
+  color: #535353;
 }
 
 #saveBtn {
